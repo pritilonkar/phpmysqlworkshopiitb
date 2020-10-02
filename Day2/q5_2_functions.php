@@ -1,10 +1,9 @@
 <?php
-
-function writename2($firstname)
-{
-echo "My name is Jai ". $firstname;
-echo "<br>My brother's name is Ram ".$firstname;
-}
-writename2("sharma");
- 
- ?>
+  function writeName2($firstname){
+    echo $firstname." Sharma";
+  }
+  echo "My name is ";
+  writeName2("Jai");
+  echo "<br>My brother's name is ";
+  writeName2("Ram");
+?>
