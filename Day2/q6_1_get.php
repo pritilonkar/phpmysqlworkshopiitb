@@ -1,44 +1,30 @@
 <html>
 <body>
-
-<form action="q6_1_get.php" method="GETs">
-first side:<input type="txt" name="side1" required><br>
-Second side:<input type="txt" name="side2" required ><br>
-Third soide:<input type="txt" name="side3" required><br>
-<input type="submit" name="btn" value="check triangle">
+<form action='q6_1_get.php' method='GET'>
+  Side 1: <input type='number' name='s1' >
+  Side 2: <input type='number' name='s2' >
+  Side 3: <input type='number' name='s3' >
+  <input type='submit' value='Check Triangle'>
 </form>
-
 </body>
 </html>
-<?php 
-if(isset($_GET['btn']))
-{
-	
-$side1 = $_GET['side1'];
-$side2 = $_GET['side2'];
-$side3 = $_GET['side3'];
-
-	   
-    // Check for equilateral triangle 
-    if ($side1 == $side2 && $side2 == $side3) 
-	{
-		echo "Equilateral Triangle"; 
-	}
-    // Check for isoceles triangle 
-    else if ($side1 == $side2 || $side2 == $side3 || $side3 == $side1) 
-	{
-		echo "Isoceles Triangle"; 
-	}  
-    // Otherwise scalene triangle 
+<?php
+    @$a = $_GET['s1'];
+    @$b = $_GET['s2'];
+    @$c = $_GET['s3'];
+    if($a && $b && $c)
+    {
+      if($a == $b && $b == $c)
+        echo "Equilateral Triangle";
+      elseif($a == $b || $b == $c || $a == $c)
+        echo "Isosceles Triangle";
+      elseif($a*$a + $b*$b == $c*$c || $a*$a + $c*$c == $b*$b || $a*$a == $b*$b + $c*$c)
+        echo "Right angled Triangle";
+      elseif($a!=$b && $b!=$c)
+        echo "Scalene Triangle";
+    }
     else
-	{
-		echo "Scalene Triangle"; 
-	}
-	
-
-}
-else 
-{
-	echo"*fill all sides value* ";
-}
-?>
+    {
+      echo "Please enter the Values of 3 sides of Triangle";
+    }
+ ?>
