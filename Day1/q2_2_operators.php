@@ -9,7 +9,7 @@
 	{
         		  echo "Numbers are equal";
       	}
-               else {
+       else {
 		echo "$num2 is greater ";
 			   }
 ?>
