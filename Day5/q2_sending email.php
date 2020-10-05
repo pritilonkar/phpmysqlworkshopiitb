@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
 	 
 if ($toemail && $message)
 	{
-		$to = "pritilonkar19@gmail.com";
+		$to = "xxxxx@gmail.com";//your email id
 		$subject = $subject;
 		$headers = $toemail;
 		$body = $message;
@@ -34,7 +34,7 @@ if ($toemail && $message)
 				{
 					$to1 = $toemail;
 					$subject1 = "thanks";
-					$headers1 = "From:pritilonkar19@gmail.com";
+					$headers1 = "From:xxxxx@gmail.com";
 					$body1 = "thanks for feedback!";
 					
 					mail($to1 ,$subject1 ,$body1 , $headers1);
