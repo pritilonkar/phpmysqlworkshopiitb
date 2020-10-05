@@ -43,7 +43,7 @@ if ($toemail && $message)
 				}
 	}
 	else 
-		die("you must enter a name <u> and </u> message");
+		die("you must enter email id <u> and </u> feedback message");
 }
 		
 ?>
